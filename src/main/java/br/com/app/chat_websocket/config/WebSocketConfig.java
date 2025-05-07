@@ -13,7 +13,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     // Configura o message broker habilitando o tópico para envio da mensagem - protocolo STOMP
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/topic-canal");
+        config.enableSimpleBroker("/topic-channel");
         config.setApplicationDestinationPrefixes("/app");
     }
 
@@ -21,6 +21,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry
-                .addEndpoint("/concord-livechat");
+                .addEndpoint("/concord-livechat").withSockJS();
     }
 }
