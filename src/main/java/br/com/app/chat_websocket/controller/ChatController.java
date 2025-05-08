@@ -25,7 +25,7 @@ public class ChatController {
             headerAccessor.setSessionAttributes(new HashMap<>());
         }
         // Por fim, adiciona o usuário pelo username à sessão
-        headerAccessor.getSessionAttributes().put("username", chatMessage.getUsername());
+        headerAccessor.getSessionAttributes().put("username", chatMessage.username());
         return chatMessage;
     }
 }
