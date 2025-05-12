@@ -1,7 +1,5 @@
 package br.com.app.chat_websocket.domain.models;
 
-import java.util.Optional;
-
 public record ChatMessage(
         String username,
         String message,
@@ -18,5 +16,9 @@ public record ChatMessage(
 
         public static ChatMessage leave(String username) {
                 return new ChatMessage(username, "leave this chat", MessageType.LEAVE);
+        }
+
+        public static ChatMessage typing(String username) {
+                return new ChatMessage(username, "is typing", MessageType.TYPING);
         }
 }
