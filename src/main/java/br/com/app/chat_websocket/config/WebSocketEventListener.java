@@ -21,21 +21,6 @@ public class WebSocketEventListener {
         log.info("Connection has been initialized successfully");
     }
 
-//    @EventListener
-//    public void webSocketOnlineEventListener() {
-//        // TODO
-//    }
-//
-//    @EventListener
-//    public void webSocketOfflineEventListener() {
-//        // TODO
-//    }
-//
-//    @EventListener
-//    public void webSocketTypeMessageEventListener() {
-//        // TODO
-//    }
-
     @EventListener
     public void webSocketDisconnectEventListener(SessionDisconnectEvent disconnectEvent) {
         StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(disconnectEvent.getMessage());

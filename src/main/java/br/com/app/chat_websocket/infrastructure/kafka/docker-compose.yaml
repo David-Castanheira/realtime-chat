@@ -21,4 +21,4 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      #KAFKA_CREATE_TOPICS: "create-order-topic:1:1,update-order-topic:1:1,cancel-order-topic:1:1"
+      KAFKA_CREATE_TOPICS: "chat-messages:3:1, user-events:3:1, sqs-queue:3:1"

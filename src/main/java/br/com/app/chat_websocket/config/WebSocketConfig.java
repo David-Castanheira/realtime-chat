@@ -32,6 +32,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry
                 .addEndpoint("/livechat")
+                // Configuração do CORS
                 .setAllowedOrigins("*");
 //              .withSockJS();
     }
